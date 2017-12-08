@@ -88,7 +88,7 @@ col("TaxiOut").cast(IntegerType)
 We only choose the most relevant ones before passing the features to the linear regression model, in order to compute only the necessary attributes and after test the rest of them are not useful for the model creation we deduce the following variables are the most relevant for the creation of the model:
 
 ```scala
-val vectorSlicer = new VectorSlicer()
+new VectorSlicer()
       .setInputCol("rawFeatures")
       .setOutputCol("features")
       .setNames(Array("DayOfWeek", "DepTime", "CRSDepTime", "CRSArrTime", "CRSElapsedTime", "DepDelay", "OriginIndex", "DestIndex", "Distance", "TaxiOut"))
@@ -105,11 +105,11 @@ new LinearRegression()
     .setLabelCol("ArrDelay")
     .setFeaturesCol("features")
     .setMaxIter(10)
-    .setRegParam(0.3)
-    .setElasticNetParam(0.8)
+    .setRegParam(0.3) // Increasing lambda results in less overfitting but also greater bias
+    .setElasticNetParam(0.8) // Reduce overfitting
 ```
 
-We set 0.3 as the regularization parameter, increasing lambda results in less overfitting but also greater bias. And to reduce the possible overfitting we set 0.8 for the ElasticNet mixing parameter.
+We set 0.3 as the regularization parameter, increasing lambda results in less overfitting but also greater bias. To reduce the possible overfitting ElasticNet mixing parameter will take a value of 0.8.
 
 ## Model validation
 
