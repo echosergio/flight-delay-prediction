@@ -175,14 +175,14 @@ Run SBT package command to generate .jar file:
 user@host:/flight-delay-prediction$ sbt package
 ```
 
-Enter to Hortonworks Data Platform sandbox and download the data file and put it into HDFS:
+Enter to Hortonworks Data Platform sandbox, download the data file and put it into HDFS:
 
 ```shell
 [root@sandbox ~]# hadoop fs -mkdir /tmp/data
 [root@sandbox ~]# hadoop fs -put /tmp/data/2007.csv /tmp/data/
 ```
 
-Copy project jar file into the HDP sandbox and submit and launch the spark yarn task:
+Copy project .jar file into the HDP sandbox and submit the spark yarn task:
 
 ```shell
 [root@sandbox ~]# spark-submit --master yarn --class App flight-delay-prediction_2.11-0.1.jar /tmp/data/2007.csv
