@@ -13,7 +13,7 @@ In this analysis we removed non quantitative variables as are not relevant for t
 In the following table we can see the percentage of variance in each principal component, we can conclude that the first three PC are the ones who will contain the bigger amount of the information.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sergiovhe/flight-delay-prediction/master/img/fig1.png" alt="Scree plot" width="226">
+  <img src="https://raw.githubusercontent.com/sergiovhe/flight-delay-prediction/master/img/fig1.png" alt="Scree plot" width="400">
   <br>
 </p>
 
@@ -24,7 +24,7 @@ If we take a look at the first component we realize that the arrival delay is co
 To get a better view of the relation of the variables we plot the level of correlation of the variables from the two main principal components, the PC1 is the most relevant for our analysis.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sergiovhe/flight-delay-prediction/master/img/fig2.png" alt="PCA variables" width="226">
+  <img src="https://raw.githubusercontent.com/sergiovhe/flight-delay-prediction/master/img/fig2.png" alt="PCA variables" width="400">
   <br>
 </p>
 
@@ -35,7 +35,7 @@ The analysis shows us that the departure delay (DepDelay) and the actual arrival
 If we plot the linear relationship we can clearly appreciate the correlation in a sample of the data set:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sergiovhe/flight-delay-prediction/master/img/fig3.png" alt="Scatter Plot" width="226">
+  <img src="https://raw.githubusercontent.com/sergiovhe/flight-delay-prediction/master/img/fig3.png" alt="Scatter Plot" width="400">
   <br>
 </p>
 
